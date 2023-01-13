@@ -1,0 +1,478 @@
+@import url(../../public/font.css);
+
+body{
+    margin: 0;
+    overflow-x: hidden;
+    
+}
+
+a{
+    display: block;
+    text-decoration: none;
+    color:inherit;
+}
+
+nav{
+    width: 100%;
+    position: sticky;
+    top:0;
+    z-index: 99999;
+    
+}
+
+nav h1{
+    position: absolute;
+    top:12px;
+}
+
+nav ul{
+    display: flex;
+    margin: 0; padding: 0; list-style: none;
+}
+
+nav label{
+    width: 234px;
+    font-size: 13px;
+    position: absolute;
+    vertical-align: middle;
+    padding: 5px 0 0 5px ;
+    right: 250px;
+    color:#767772
+}
+
+nav button{
+    background-color: transparent;
+    border: none;
+    
+}
+
+nav button img{
+    vertical-align: bottom;
+}
+
+nav input{
+    width: 107px;
+    height: 18px;
+    border: 1px solid #cacaca;
+    vertical-align: bottom;
+}
+
+nav .restar{
+    background-color: #f0f0f0;
+    height: 30px;
+    font-size: 13px;
+    line-height: 30px;
+    justify-content: end;
+}
+
+nav .restar > li{
+    width: 60px;
+   
+}
+
+nav .restar li::after{
+    content: "|";
+    position: absolute;
+    color: #ccc;
+    padding: 0 10px;
+}
+
+nav .menu{
+    height: 80px;
+    justify-content: center;
+    font-size: 20px;
+    line-height: 80px;
+    background-color: white;
+}
+
+nav .menu > li{
+    text-align: center;
+}
+nav .menu>li a{
+    width: 165px;
+}
+nav .menu>li:hover {
+    border-left: solid 1px #e1e1e1;
+    border-right: solid 1px #e1e1e1;
+}
+
+
+/* 소메뉴 */
+nav .menu > li ul{
+    position: absolute;
+    flex-direction: column;
+    pointer-events: none;
+    font-size: 14px;
+    color: white
+}
+
+nav .menu>li:hover > .menuSub{
+    color:#333333;
+    background-color: white;
+    height: 255px;
+    transition: 1s;
+}
+
+
+nav .menu::before{
+    content: "";
+    position: absolute;
+    top:110px;
+    height: 0;
+    width: 100%;
+    background-color: #096eb8;
+     opacity: .7;
+    transition: 0.4s; 
+}
+ nav .menu:hover::before {
+    height: 255px;
+    
+}
+
+ 
+ nav .menu> li ul a {
+   display: none;
+    
+}
+
+nav .menu:hover.menu>li ul a{
+    display: block;
+    pointer-events: all;
+    
+} 
+
+.menu>li ul a:hover{
+    color:#096eb8
+}
+
+
+
+nav .menu>li ul> li{
+    height: 34px;
+    width: 165px;
+    
+}
+
+.mySwiper{
+    width: 100%;
+    height: 700px;
+    color: white;
+}
+
+.Slide1{
+    background-image: url(../../public/img/slide1.jpg)
+}
+.Slide2 {
+    background-image: url(../../public/img/slide2.jpg);
+}
+.Slide3 {
+    background-image: url(../../public/img/slide3.jpg);
+}
+
+.mySwiper .txtbox{
+    position: relative;
+    top: 300px; left: 355px;
+    
+    
+    
+}
+
+    @keyframes slide-top1 {
+    0% {
+     
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+       
+        transform: translateY(-100px);
+    }
+}
+    @keyframes slide-top2 {
+    0% {
+        
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-110px);
+    }
+}
+    @keyframes slide-top3 {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-120px);
+    }
+}
+
+
+.mySwiper .txtbox p{
+    font-size: 25px;
+    margin: 0;
+    animation: slide-top3 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+.mySwiper .txtbox p:first-child{
+    font-size: 18px;
+    animation: slide-top1 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+   
+}
+.mySwiper .txtbox h2{
+    font-size: 50px;
+    margin: 15px 0;
+    animation: slide-top2 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite;
+}
+
+.mySwiper .swiper-pagination-bullet{
+    border:solid 2px white;
+    background: none;
+    width: 16px; height: 16px;
+    transition: .5s;
+    opacity: 1;
+   
+}
+
+.mySwiper .swiper-pagination-bullet-active{
+    background-color: white;
+}
+
+
+.MAIN{
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.MAIN h3{
+    font-size: 32px;
+    margin: 0;
+}
+
+.MAIN p{
+    font-size: 15px;
+    width: 190px;
+
+}
+
+.MAIN h4{
+    font-size: 20px;
+    
+}
+
+.MAIN div{
+    margin: 0 50px;
+}
+
+.MAINTitle{
+    text-align: left;
+}
+
+.MAINTitle p{
+    font-size: 13px;
+    color:#999999
+}
+
+.MAIN table{
+    width: 410px;
+    height: 256px;
+    text-align: left;
+    margin-left: 32px;
+    border-spacing: 0;
+
+    display: table-row
+}
+
+.prodcutImg{
+    width: 265px;
+    overflow: hidden;
+    margin: 0;
+}
+
+.prodcutImg img:hover{
+   transform: scale(1.1); ;
+   transition: 0.5s;
+   filter: opacity(80%);
+}
+
+th{
+    display: flex;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 332px;
+    
+}
+
+th img{
+    margin-left: auto;
+}
+
+td{
+    font-size: 14px;
+    border-bottom: 1px solid #e1e1e1;
+    height: 50px; width: 410px;
+    
+}
+td:nth-child(2){
+    text-align: right;
+}
+
+.contactBox {
+    border: 1px solid;
+    width: 408px;
+    height: 250px;
+    margin: 0;
+}
+
+.map {
+    background: url(../../public/img/444.png) no-repeat 50%;
+    background-size: cover;
+}
+
+.adds {
+    background-image: url(../../public/img/tel_bg.png);
+}
+.adds strong {
+    font-size: 38px;
+    display: block;
+    margin-top: 70px;
+}
+
+.adds p {
+    font-size: 14px;
+    width: 100%;
+}
+
+.contactBtn {
+    width: 335px;
+    height: 55px;
+    background-color:#333333;color: white;
+    line-height: 55px;
+    position: relative;
+    z-index: 1;
+}
+
+.contactBtn a::after{
+    content: "";
+    position: absolute;
+    width: 0px;
+    height: 55px;
+    background-color:#F25454;
+    top:0; left: 0;
+    z-index: -1;
+}
+
+.contactBtn a:hover::after{
+    width: 335px;
+    transition: 1s;
+}
+
+
+.contactBtn:nth-child(1){
+    bottom: -230px;
+    right:  470px;
+}
+
+.contactBtn:nth-child(2){
+    bottom: -175px;
+    right: 15px;
+}
+
+/*    .contactBtn::before{
+    content: "";
+    position: absolute;
+    transform: translateX(-165px);
+    background-color: red;
+    width: 330px; height: 55px;
+} */
+
+
+/* .contactBox::after{
+    content: "";
+    display: block;
+    width: 330px;height: 55px;
+    background-color: #333333;color: white;
+    line-height: 55px;
+}
+
+.contactBox:hover::after{
+    background-color:#F25454;
+    transition: .3s;
+}
+
+.adds::after{
+    background-color: #333333;
+        color: white;
+    content: "온라인 문의";
+    margin: 80px 0 0 37px ;
+   
+}
+.map::after{
+    background-color: #333333;color: white;
+    content: "찾아오시는 길";
+    margin: 226px 0 0 35px;
+ 
+}
+
+} */
+
+footer{
+    font-size: 14px;
+    color:#333333
+}
+footer div{
+    width: 800px;
+}
+
+footer ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+footer strong{
+    color: #cccccc;
+    text-decoration: underline;
+}
+
+.footer1{
+    height: 55px;
+    border-bottom: 1px solid #cccccc;
+    margin: 0;
+}
+
+.footer1 li{
+    
+    padding:15px 14px;
+}
+
+.footerline{
+border-right: 1px solid #cccccc;
+}
+.icon{
+  position: absolute;
+  right: 0;
+}
+
+@media (max-width:700px) {
+    .icon{
+        display: none;
+    }
+    
+}
+
+.footerdiv{
+    display: flex;
+    padding: 20px 0 70px;
+}
+
+.footerdiv h2 {
+    margin: 0 30px;
+    position: relative;
+}
+
